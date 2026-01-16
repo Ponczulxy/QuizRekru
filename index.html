@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIMC - QUIZ REKURTACJA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intro-overlay">
+        <div class="loader-line"></div>
+        <h1 class="intro-text">UNIMC REKRUTACJA</h1>
+    </div>
+
+    <div class="canvas-wrapper">
+        <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <div class="main-container">
+        <header class="header-anim">
+            <img src="logo.png" alt="UNIMC" class="app-logo">
+        </header>
+        
+        <div id="quiz-card" class="glass-card card-entrance">
+            <div id="quiz-content">
+                <div class="card-header">
+                    <div class="progress-container">
+                        <span id="q-counter">PYTANIE 00 / 20</span>
+                        <div class="progress-track"><div id="progress-bar"></div></div>
+                    </div>
+                    <div class="timer-box">
+                        <svg class="timer-ring"><circle cx="25" cy="25" r="22"></circle></svg>
+                        <span id="time-left">30</span>
+                    </div>
+                </div>
+
+                <div class="question-section">
+                    <h2 id="question-text">Inicjalizacja protokołów...</h2>
+                    <div id="options-grid" class="options-grid"></div>
+                </div>
+
+                <div class="footer-action">
+                    <button id="next-btn" class="hidden btn-primary">NASTĘPNE PYTANIE</button>
+                </div>
+            </div>
+
+            <div id="result-screen" class="hidden">
+                <h1 class="result-title"></h1>
+                <div id="final-logs" class="logs-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
